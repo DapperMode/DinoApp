@@ -40,20 +40,3 @@ input[type="select"] {
 .body-content{
     min-height: 50vh;
 }
-
-@keyframes blink{
-    0% {
-        height:initial;
-    }
-    50%{
-        height:0;
-    }
-    100%{
-        height:initial;
-    }
-}
-
-.blink{
-    animation-name: blink;
-    animation-duration: 1s;
-}
