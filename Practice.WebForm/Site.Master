@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %>Test WebForm Home</title>
+    <title><%: Page.Title %>Dino Stats App</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -15,7 +15,7 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
-    <form runat="server">
+    <form class="form-inline" runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/Index.aspx">Home</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,13 +57,13 @@
         <div class="container body-content" ng-controller="dinoListController">
 
             <div class="jumbotron text-center">
-                <h1>Test WebForms Site!</h1>
+                <h1>Dino Stats App</h1>
             </div>
 
-            <div class="panel panel-primary">
+            <div class="">
                 <ul class="nav nav-tabs nav-justified">
-                    <li><a data-toggle="tab" href=".stats">Stat Comparison</a></li>
-                    <li><a data-toggle="tab" href=".details">Details</a></li>
+                    <li><a id="StatPaneToggle" data-toggle="tab" href=".stats">Stat Comparison</a></li>
+                    <li><a id="DetailPaneToggle" data-toggle="tab" href=".details">Details</a></li>
                 </ul>
             </div>
             <div class="row panel panel-primary">
@@ -101,6 +101,7 @@
     <script src="/Scripts/angular-resource.js"></script>
     <script src="/Scripts/Chart.js"></script>
 
+    <script src="/Scripts/myScripts/myScript.js"></script>
     <script src="/Scripts/app/app.js"></script>
     <script src="/Scripts/app/Services/dinoListService.js"></script>
     <script src="/Scripts/app/Controllers/dinoListController.js"></script>
