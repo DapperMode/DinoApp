@@ -1,6 +1,7 @@
 ﻿using Practice.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,26 @@ namespace Practice.EF
             }
 
             return returnCollection;
+        }
+
+        public void SaveDino(Dino dinoToSave)
+        {
+            db.Dinos.Add(dinoToSave);
+            db.SaveChanges();
+        }
+
+        public void UpdateDino(Dino dinoToUpdate)
+        {
+            db.Entry(dinoToUpdate).State = EntityState.Modified;
+            db.SaveChanges();
+        }
+
+        public void DeleteDino(int id)
+        {
+            Dino dinoToRemove = new Dino { DinoID = id };
+            db.Dinos.Attach(dinoToRemove);
+            db.Dinos.Remove(dinoToRemove);
+            db.SaveChanges();
         }
 
         public Image GetImageItem(int imageID)

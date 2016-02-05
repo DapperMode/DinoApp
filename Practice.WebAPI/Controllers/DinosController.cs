@@ -11,34 +11,37 @@ namespace Practice.WebAPI.Controllers
 {
     public class DinosController : ApiController
     {
-        DinoDAL db = new DinoDAL(); // calls using entity framework happen in this class
+        DinoDAL dal = new DinoDAL(); // calls using entity framework happen in this class
 
         // GET api/<controller>/5
         public Dino Get(int id)
         {
-            Dino dino = db.GetDinoItem(id);
+            Dino dino = dal.GetDinoItem(id);
             return dino;
         }
 
         // GET api/<controller>
         public DinoCollection Get()
         {
-            return db.GetDinoCollection();
+            return dal.GetDinoCollection();
         }
 
         // POST api/<controller>
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Dino dinoToSave)
         {
+            dal.SaveDino(dinoToSave);
         }
 
         // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody]Dino dinoToUpdate)
         {
+            dal.UpdateDino(dinoToUpdate);
         }
 
         // DELETE api/<controller>/5
         public void Delete(int id)
         {
+            dal.DeleteDino(id);
         }
     }
 }

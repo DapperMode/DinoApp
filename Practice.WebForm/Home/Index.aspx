@@ -8,7 +8,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <label id="LeftCompareFilter" class="">Filter:</label>
-                    <input id="LeftCompareSearchValue" ng-model="LeftCompareSearchValue" placeholder="Type here to filter" />
+                    <input id="LeftCompareSearchValue" ng-model="LeftCompareSearchValue" placeholder="Type here to filter results" />
                 </div>
                 <div class="col-md-6">
                     <label>CurrentSelection:</label>
@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <label id="LeftDetailFilter">Filter:</label>
-                    <input id="LeftDetailSearchValue" ng-model="LeftDetailSearchValue" placeholder="Type here to filter" />
+                    <input id="LeftDetailSearchValue" ng-model="LeftDetailSearchValue" placeholder="Type here to filter results" />
                 </div>
                 <div class="col-md-6">
                     <label>CurrentSelection:</label>
@@ -53,7 +53,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <label id="RightCompareFilter">Filter:</label>
-                    <input id="RightCompareSearchValue" ng-model="RightCompareSearchValue" placeholder="Type here to filter" />
+                    <input id="RightCompareSearchValue" ng-model="RightCompareSearchValue" placeholder="Type here to filter results" />
                 </div>
                 <div class="col-md-6">
                     <label>CurrentSelection:</label>
