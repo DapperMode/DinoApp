@@ -50,6 +50,8 @@ namespace Practice.EF
             db.SaveChanges();
         }
 
+
+
         public Image GetImageItem(int imageID)
         {
             return new Image();

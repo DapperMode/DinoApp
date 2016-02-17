@@ -18,26 +18,35 @@ namespace Practice
         delegate int pointTo(int[] x);
         static void Main(string[] args)
         {
-            //--------------------------------------------------
-            // testing dino services
-            DinoService service = new DinoService();
+            List<int> test = new List<int>();
 
-            DTODinoCollection testCollection = new DTODinoCollection();
-
-            testCollection = service.GetDinoCollection();
-
-            foreach (var d in testCollection)
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(string.Format("NAME: {0} HEALTH: {1}", d.Name, d.Health));
-                Console.WriteLine();
+                test.Insert(test.Count(), (test.Count()));
+                Console.WriteLine(test[i]);
             }
 
-            DTODino testDino = service.GetDinoItem("1");
-            Console.WriteLine("NAME: " + testDino.Name + " STAMINA: " + testDino.Stamina);
 
-            Console.ReadLine();
+            ////--------------------------------------------------
+            //// testing dino services
+            //DinoService service = new DinoService();
 
-            //--------------------------------------------------
+            //DTODinoCollection testCollection = new DTODinoCollection();
+
+            //testCollection = service.GetDinoCollection();
+
+            //foreach (var d in testCollection)
+            //{
+            //    Console.WriteLine(string.Format("NAME: {0} HEALTH: {1}", d.Name, d.Health));
+            //    Console.WriteLine();
+            //}
+
+            //DTODino testDino = service.GetDinoItem("1");
+            //Console.WriteLine("NAME: " + testDino.Name + " STAMINA: " + testDino.Stamina);
+
+            //Console.ReadLine();
+
+            ////--------------------------------------------------
 
             ////--------------------------------------------------
             //// String comparisons and the equality operators - RESEARCH
